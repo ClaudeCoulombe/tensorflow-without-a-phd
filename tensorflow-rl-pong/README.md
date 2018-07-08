@@ -39,10 +39,19 @@ python -m trainer.task
 
 ## Run training job
 
-To submit the training job to Cloud Machine Learning Engine:
+In order to submit the training job to the Google Cloud Machine Learning Engine from your laptop:
 
 ```
-GCS_BUCKET=<gs://YOUR-BUCKET/> bash submit.sh
+1) Install the GitHub tensorflow-rl-pong code and requirements on your laptop
+2) Get a Google Cloud Account and enable billing (credit card)
+3) Create a Google Cloud Platform project on Google Cloud
+4) Install the GCP command line tools on your laptop
+5) Create a Google Cloud Data bucket in order to store the code and the trained model on Google Cloud
+6) On your laptop, you should edit the submit.sh and change the commented line
+# GCS_BUCKET="gs://my-bucket/"
+and replace my-bucket by your bucket id you've created in 5)
+7) On your laptop, do bash submit.sh or eventually sudo bash submit.sh
+
 ```
 
 
